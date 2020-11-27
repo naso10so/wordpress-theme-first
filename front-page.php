@@ -63,12 +63,9 @@
     </header>   
      <article>
         <section id="sec1-firstview">
-            <h1>ブログタイトル</h1>
+            <h1><?php bloginfo('name'); ?></h1>
             <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa a at, reiciendis aspernatur aliquam
-                    dolore quae dolorum nihil saepe consequatur sunt suscipit atque maiores unde sed, quidem fugiat sit
-                    est necessitatibus qui recusandae? Ut laborum aspernatur explicabo sit excepturi, nam perspiciatis!
-                    Debitis alias harum aperiam quo. Neque, reiciendis similique. Voluptate!</p>
+                <p><?php bloginfo('description'); ?></p>
                 <a href="#sec3-portfolio" class="btn">制作実績を見る</a>
                 <a href="#sec5-contactform" class="btn">お仕事のご依頼</a>
             </div>
@@ -135,22 +132,21 @@ echo "今日は".date("Y/m/d").$week[$w]."です";
             <h1>新着記事</h1>
             <div class="blog">
                 <!-- 【課題3の答え】 -->
-                <form action="/ginowan-php-reference#sec4-newblog" method="GET"> <!-- 入力された内容をactionで指定された場所にGETメソッドで送る -->
-                    <input type="number" name="number" placeholder="表示記事数">
-                    <input type="submit">
-                </form>
-                <?php $num = $_GET["number"];//GETメソッドで送られた数字を取得して変数numに代入
-                for($i=0;$i<$num;$i++):?> <!-- カウンター($i)が、入力された数字($num)より小さい間以下を繰り返す -->
-                <div class="blog-content" >
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/thumb_01.png" alt="ブログ1サムネイル">
-                    <div class="blog-info">
-                        <h2>タイトルが入ります</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur corporis aliquid eius
-                            blanditiis atque itaque quas ullam iusto veniam. Neque!</p>
-                        <a href="#">カテゴリ名</a><a href="#">2019.07.25</a>
-                    </div>
-                </div>
-                <?php endfor; ?> <!-- 繰り返し処理の終了 -->
+                <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                        <div class="blog-content" >
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/thumb_01.png" alt="ブログ1サムネイル">
+                            <div class="blog-info">
+                                <h2><?php the_title(); ?></h2>
+                                <p><?php the_content(); ?></p>
+                                <a href="#">カテゴリ名</a><a href="#">2019.07.25</a>
+                            </div>
+                        </div>
+                    <?php endwhile; ?><?php else : ?>
+                        <!-- コンテンツがない時の表示 -->
+                        <p>投稿がありません</p>
+                <?php endif; ?>
+
             </div>
         </section>
 
