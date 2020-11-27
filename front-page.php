@@ -1,66 +1,4 @@
-<?php ini_set('display_errors', 0);?>
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="キーワードでサイトを説明">
-    <meta name="description" content="どんなサイトか短い文章で説明">
-    <title>サイトのタイトル</title>
-
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" media="screen and ( min-width:769px )" href="<?php echo get_template_directory_uri(); ?>./css/style_pc.css">
-	<link rel="stylesheet" type="text/css" media="screen and ( max-width:768px )" href="<?php echo get_template_directory_uri(); ?>./css/style_sp.css">
-
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-<!-- drawer.css -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
-<!-- jquery & iScroll -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
-<!-- drawer.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
-<!-- <script type="text/javascript" src="js/jquery.fadethis.min.js"></script> -->
-
-<script type="text/javascript" src="js/common.js"></script>
-<link rel="stylesheet" type="text/css" media="screen and ( min-width:769px )" href="./css/style_pc.css">
-<link rel="stylesheet" type="text/css" media="screen and ( max-width:768px )" href="./css/style_sp.css">
-
-    </head>
-
-<body  class="drawer drawer--right">
-    <header>
-        <nav class="header header-menu">
-            <ul class="flex">
-                <li><a href="#" class="menu-items">TOP</a></li>
-                <li><a href="#sec2-profile" id="sec2" class="menu-items">プロフィール</a></li>
-                <li><a href="#sec3-portfolio" id="sec3" class="menu-items">制作実績</a></li>
-                <li><a href="#sec4-newblog" id="sec4" class="menu-items">新着記事</a></li>
-                <li><a href="#sec5-contactform" id="sec5" class="menu-items">お問い合わせ</a></li>
-                <li><a href="#" id="jp-menu" class="menu-items">日本語</a></li>
-                <li><a href="#" id="en-menu" class="menu-items">English</a></li>
-             </ul>
-        </nav>
-            <button type="button" class="drawer-toggle drawer-hamburger">
-        <span class="sr-only">toggle navigation</span>
-        <span class="drawer-hamburger-icon"></span>
-      </button>
-      <nav class="drawer-nav" role="navigation">
-            <ul class="drawe-menu">
-                <li><a href="#" class="menu-items">TOP</a></li>
-                <li><a href="#sec2-profile" id="sec2" class="menu-items drawer-menu-item">プロフィール</a></li>
-                <li><a href="#sec3-portfolio" id="sec3" class="menu-items drawer-menu-item">制作実績</a></li>
-                <li><a href="#sec4-newblog" id="sec4" class="menu-items drawer-menu-item">新着記事</a></li>
-                <li><a href="#sec5-contactform" id="sec5" class="menu-items drawer-menu-item">お問い合わせ</a></li>
-                <li><a href="#" id="jp-menu" class="menu-items drawer-menu-item">日本語</a></li>
-                <li><a href="#" id="en-menu" class="menu-items drawer-menu-item">English</a></li>
-            
-            </ul>
-        </nav>
-       
-    
-    </header>   
+<?php get_header(); ?>
      <article>
         <section id="sec1-firstview">
             <h1><?php bloginfo('name'); ?></h1>
@@ -138,8 +76,8 @@ echo "今日は".date("Y/m/d").$week[$w]."です";
                             <img src="<?php echo get_template_directory_uri(); ?>/img/thumb_01.png" alt="ブログ1サムネイル">
                             <div class="blog-info">
                                 <h2><?php the_title(); ?></h2>
-                                <p><?php the_content(); ?></p>
-                                <a href="#">カテゴリ名</a><a href="#">2019.07.25</a>
+                                <p><?php the_excerpt(); ?></p>
+                                <a href="#"><?php the_tags(); ?></a><a href="#"><?php the_time(); ?></a>
                             </div>
                         </div>
                     <?php endwhile; ?><?php else : ?>
@@ -184,9 +122,4 @@ echo "今日は".date("Y/m/d").$week[$w]."です";
 
     <button id="pagetop"><a href="#"> page top</a></button>
 
-    <footer>
-        <p class="copyright">Copyright &copy; DEMO all rights reserved.</p>
-    </footer>
-</body>
-
-</html>
+    <?php get_footer(); ?>
