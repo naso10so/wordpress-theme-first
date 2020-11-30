@@ -73,7 +73,7 @@ echo "今日は".date("Y/m/d").$week[$w]."です";
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>
                         <div class="blog-content" >
-                            <?php the_post_thumbnail('thumbnail');?>
+                            <?php the_post_thumbnail('category-thumb');?>
                             <div class="blog-info">
                                 <h2><?php the_title(); ?></h2>
                                 <p><?php the_excerpt(); ?></p>
