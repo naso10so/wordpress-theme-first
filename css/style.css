@@ -2,9 +2,26 @@
 パソコン版スマホ版共通CSSです
 */
 
+/* コンポーネント */
+.button {
+    background-color: rgb(255, 91, 118);
+    border-radius: 5px;
+    color: white;
+    box-shadow: 1px 1px 10px lightgray;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0.5em;
+    width: 100px;
+}
+.blog__botton {
+    margin: auto;
+}
+
+/* ブロック */
 .main-content {
     max-width: 800px;
     margin: auto;
+    min-height: 100vh;
     padding: 70px 0;
 }
 .daily__img {

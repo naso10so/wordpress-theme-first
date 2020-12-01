@@ -30,7 +30,7 @@
     <header>
         <nav class="header header-menu">
             <ul class="flex">
-                <li><a href="#" class="menu-items">TOP</a></li>
+                <li><a href="/" class="menu-items">TOP</a></li>
                 <li><a href="#sec2-profile" id="sec2" class="menu-items">プロフィール</a></li>
                 <li><a href="#sec3-portfolio" id="sec3" class="menu-items">制作実績</a></li>
                 <li><a href="#sec4-newblog" id="sec4" class="menu-items">新着記事</a></li>
