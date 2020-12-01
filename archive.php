@@ -6,7 +6,7 @@
             <a href="<?php the_permalink(); ?>">
 
                 <div class="post">
-                    <?php the_post_thumbnail('category-thumb');?>
+                    <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="post__img">
                     <div class="post__content">
                         <h2 class="post__title"><?php the_title(); ?></h2>
                         <?php echo "<p class='post__text'>" . get_the_excerpt() . "</p>"; ?>
