@@ -1,0 +1,12 @@
+/* 
+パソコン版スマホ版共通CSSです
+*/
+
+.main-content {
+    max-width: 800px;
+    margin: auto;
+    padding: 70px 0;
+}
+.daily__img {
+    width: 600px;
+}

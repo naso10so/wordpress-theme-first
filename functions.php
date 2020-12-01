@@ -14,6 +14,7 @@ function sakura_theme_link() {
     // }else{
     //     wp_enqueue_style('pc-css', get_template_directory_uri() . '/css/style_pc.css');
     // }
+    wp_enqueue_style('common-css', get_template_directory_uri() . '/css/style.css');
     wp_enqueue_style('pc-css', get_template_directory_uri() . '/css/style_pc.css', array(), '5', 'screen and ( min-width:768px )');
     wp_enqueue_style('sp-css', get_template_directory_uri() . '/css/style_sp.css', array(), '5', 'screen and ( max-width:768px )');
     wp_enqueue_style('drawer-css', 'https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.css');
@@ -36,7 +37,7 @@ function sakura_theme_init(){
             // アイコンの設定
             'menu_icon' => 'dashicons-book-alt',
             // 表示順の設定 投稿が５
-            'menu_position' => 0,
+            'menu_position' => 3,
             // 新エディタに変えるコード
             'show_in_rest' => true,
             // 参照 https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/register_post_type
