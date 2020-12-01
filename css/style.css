@@ -27,3 +27,19 @@
 .daily__img {
     width: 600px;
 }
+.post {
+    background-color: #fafafa;
+    display: flex;
+    margin: 1em 0;
+}
+.post__content {
+    padding: 1em;
+}
+.post__title {
+    color: #070707;
+    font-size: 20px;
+    text-align: left;
+}
+.post__text {
+    line-height: 1.5em;
+}
