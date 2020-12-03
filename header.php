@@ -21,11 +21,17 @@
       <span class="drawer-hamburger-icon"></span>
     </button>
     <nav class="drawer-nav" role="navigation">
-      <ul class="drawer-menu">
-        <li><a class="drawer-brand" href="#">Brand</a></li>
+        <?php 
+        wp_nav_menu( array( 
+            'theme_location' => 'main-menu',
+            'container' => false,
+            'menu_class' => 'drawer-menu',
+            'depth' => 1,
+        ) ); 
+        ?>
+        <!-- <li><a class="drawer-brand" href="#">Brand</a></li>
         <li><a class="drawer-menu-item" href="#">Nav1</a></li>
-        <li><a class="drawer-menu-item" href="#">Nav2</a></li>
-      </ul>
+        <li><a class="drawer-menu-item" href="#">Nav2</a></li> -->
     </nav>
   </header>
   <main role="main">

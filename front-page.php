@@ -28,7 +28,7 @@ $week = ["(日)", "(月)", "(火)", "(水)", "(木)", "(金)", "(土)"]; //イ�
 echo "今日は".date("Y/m/d").$week[$w]."です";
 ?> 
 
-        <section id="sec2-profile">
+        <section id="sec2-profile" class="slide-bottom">
             <h1>プロフィール</h1>
             <button id="img-change">画像変更</button>
             <button id="size-up">画像拡大</button>
