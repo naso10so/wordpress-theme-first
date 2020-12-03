@@ -55,7 +55,7 @@ a{
 
 
 /* ---header--- */
-
+/* 
 header{
     width: 100%;
     height: 55px;
@@ -84,7 +84,7 @@ header li:hover{
 
 .drawer-hamburger{
     display: none;
-}
+} */
 /* ---section--- */
 section{
     padding: 50px 100px;
